@@ -1,27 +1,16 @@
-var array = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-    
-]
-function transposeArray(array, arrayLength){
-    var newArray = [];
-    
-
-    for(var i = 0; i < array.length; i++){
-        newArray.push([]);
-    }
-
-    for(var i = 0; i < array.length; i++){
-        
-        for(var j = 0; j < arrayLength; j++){
-            newArray[j].push(array[i][j])
-
-            
-        }
-    }
-    return newArray;
-    
+const arr = [
+   [1, 1, 1],
+   [2, 2, 2],
+   [3, 3, 3],
+];
+const transpose = arr => {
+   for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < i; j++) {
+         const tmp = arr[i][j];
+         arr[i][j] = arr[j][i];
+         arr[j][i] = tmp;
+      };
+   }
 }
-r1 = transposeArray(array, array.length)
-console.log(r1)
+transpose(arr);
+console.log(arr);
