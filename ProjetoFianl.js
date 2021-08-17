@@ -1,16 +1,3 @@
-/*
- *
- * Instituto Federal de Educação, Ciência e Tecnologia - IFPE
- * Cursos: Informática para Internet | Sistemas para Internet
- * Componentes Curriculares: Lógica de Programação e Estrutura de Dados | Introdução à Programação Imperativa
- * Professor: Allan Lima - allan.lima@igarassu.ifpe.edu.br
- *
- * Nome completo: Denilson de Oliveira Carneiro, Paloma Luiza de Souza França, Gilvan Pereira de Souza, Lucas de Alves da Silva.
- * Curso:IPI
- * Segunda Avalição em Grupo
- *
- */
-
 
 // este exemplo requer a instalação da biblioteca prompt-sync
 // comando para instalação: npm install prompt-sync
