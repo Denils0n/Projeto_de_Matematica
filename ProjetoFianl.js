@@ -283,7 +283,7 @@ for (let i = 0; i < linhas; i++) {
     matriz2.push([])  
     r1.push([])
 }
-console.log("Primeira matriz")
+console.log("Primaria matriz")
 for (let i = 0; i < linhas; i++) {
     for (let j = 0; j < colunas; j++) {
         console.log(' Digite o numero da ' + contador + "º linha da matriz")
