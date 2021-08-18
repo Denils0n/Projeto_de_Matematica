@@ -364,6 +364,7 @@ console.log("A subtração das matrizes é: ", r1)
 }
 //------------------------------------------------------------------------------------------------//
 function transposta() {
+    console.lop("So funciona com matriz de ordem quadrada.")
 /*Matriz transposta da matriz Am x n é a matriz que obtemos trocando ordenadamente de posição as linhas, 
 pelas colunas. 
 Ou seja, se Am x n então Atn x m. FONTE:https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiH7Mu86rnyAhWgpZUCHfzpB5gQFnoECBoQAw&url=https%3A%2F%2Fwww.proenem.com.br%2Fenem%2Fmatematica%2Fmatrizes-teoria-nomenclatura-e-operacoes-basicas%2F%23%3A~%3Atext%3DMATRIZ%2520TRANSPOSTA%2520(AT)%2Cm%2520x%2520n%2520ent%25C3%25A3o%2520Atn%2520x%2520m.&usg=AOvVaw0tSCbohZTCRSMAgN6aEahJ */
@@ -427,15 +428,15 @@ do { // exemplo clássico da utilização do do...while
 		case 5:
 			somaMatriz()
 			break
-        case 6:
-            subitracaoMatriz()
-            break  
-        case 7:
-            transposta()
-            break  
-        case 8:
-            sobre()
-            break
+        	case 6:
+            		subitracaoMatriz()
+            		break  
+        	case 7:
+            		transposta()
+            		break  
+        	case 8:
+            		sobre()
+            		break
     }
 
 } while (opcao <= 8 && opcao >= 1)
