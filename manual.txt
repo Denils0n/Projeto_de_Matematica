@@ -1,0 +1,14 @@
+
+baixar o aquivo do projeto no github.
+você tem que baixar o node.js.
+link para baixar (https://nodejs.org/en/)
+baixe a versão 14.17.5LTS.
+metodo de instalação é igual a qualquer outro.
+um video explicando como fazer essa parte (https://www.youtube.com/watch?v=MtbL84NaV_I).
+apos a intalação você vai no seu windons e escreve "CMD" esse é o pronprit de comadndo.
+apos abrir ele, vai ter que baixar uma biblioteca.
+escreva no CMD npm install prompt-sync.
+apos baixar, você vai caminhando no CMD até onde esta o arquivo do projeto. 
+EX - se o arquivo do projeto estiver no download você vai escrever no CMD o seginte: cd download.
+apois isso você vai escrevr: node ProjetoFianl.js
+ 
