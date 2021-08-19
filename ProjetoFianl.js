@@ -1,11 +1,3 @@
-
-
-
-// este exemplo requer a instalação da biblioteca prompt-sync
-// comando para instalação: npm install prompt-sync
-// mais detalhes em https://www.npmjs.com/package/prompt-sync
-
-
 const prompt = require('prompt-sync')();
 
 // para adicionar mais opções ao menu altere esta função
@@ -20,7 +12,8 @@ function imprimirMenu() {
 	console.log('(6) Subtração de duas matrizes.')
 	console.log('(7) Transposta de uma matrizes.')
 	console.log('(8) Sobre')
-	console.log('(9) Sair')
+	console.log('(9) Fontes usadas')
+	console.log('(10) Sair')
 
 }
 
@@ -30,17 +23,19 @@ function imprimirMenu() {
 
 function determinate2x2() {
 contador = 1
+coluna = 1
 console.log("use apenas números, não use letras, simbolos ou qualquer outra coisas que não seja NÚMEROS.")
 const det2x2=[[],[]]
 
 for (let  i = 0;  i < 2; i++) {
     
     for (let j = 0; j < 2 ; j++) {
-        console.log('Digite o numero da ' + contador + "º linha")
+        console.log('Digite o numero da ' + contador + "º linha da " + coluna + "º coluna")
         det2x2[i][j] = Number(prompt('Digite os numeros da primeira linha: '))
-            
+        coluna++ 
     }
     contador++
+    coluna = 1
 }
    
 console.log(det2x2)
@@ -62,6 +57,7 @@ console.log("O determinante da matriz é:", r3)
 
 function determinate3x3() {
 contador = 1
+coluna = 1
 console.log("use apenas números, não use letras, simbolos ou qualquer outra coisas que não seja NÚMEROS.")
 
 
@@ -73,10 +69,12 @@ primeiro devemos repetir as duas primeiras colunas
 const det3x3 =[[],[],[]]
 for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
-        console.log('Digite o numero da ' + contador + "º linha")
-        det3x3[i][j] = Number(prompt('Digite os numeros da primeira linha: '))   
+        console.log('Digite o numero da ' + contador + "º linha da " + coluna + "º coluna")
+        det3x3[i][j] = Number(prompt('Digite os numeros da primeira linha: ')) 
+        coluna++  
     }
     contador++ 
+    coluna = 1
 }
 console.log(det3x3)
 p1 = det3x3[0][0]
@@ -103,6 +101,7 @@ console.log("O determinate da matriz é:", r3)
 
 function determiante4x4() {
 contador = 1
+coluna = 1
 console.log("use apenas números, não use letras, simbolos ou qualquer outra coisas que não seja NÚMEROS.")
 
 const det4x4 = [[],[],[],[]]
@@ -113,10 +112,12 @@ Normalmente, é utilizado quando as matrizes são de ordem igual ou superior a 4
 // valores da primeira linha. 
 for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
-        console.log('Digite o numero da ' + contador + "º linha")
-        det4x4[i][j] = Number(prompt('Digite'))
+        console.log('Digite o numero da ' + contador + "º linha da " + coluna + "º coluna")
+        det4x4[i][j] = Number(prompt('Digite: '))
+        coluna++
     }
     contador++ 
+    coluna = 1
 }    
 var L1C1 = det4x4[0][0] //2
 var L1C2 = det4x4[0][1] //3
@@ -162,7 +163,7 @@ DS3 = (L2C4*L3C3*L4C2)
 determinate1 =  ((DP1) + (DP2)+ (DP3)) - ((DS1) + (DS2) + DS3) 
     
 cofator1 =((L1C1 * 1) * determinate1)
-    
+
 // diagonal primaria, segundo cofator.
     
 DP1 = (L1C2*L3C3*L4C4)
@@ -220,6 +221,7 @@ cofator4 =((L4C1 * -1) * determinate4)
 determinateFinal = (cofator1 + cofator2 + cofator3 + cofator4)
 console.log(det4x4)
 console.log("O determinate da matriz é:", determinateFinal)
+console.log(cofator1, cofator2, cofator3, cofator4)
 }
 //--------------------------------------------------------------------------//
 function mutiplicacaoEscalonar() {
@@ -230,6 +232,7 @@ console.log("use apenas números, não use letras, simbolos ou qualquer outra co
 
 
 contador = 1
+coluna = 1
 var resultado = []
 var vetor = []
 
@@ -247,16 +250,23 @@ for(var i = 0; i < linhas; i++){
 for (let i = 0; i < linhas ; i++) {
        
     for (let j = 0; j < colunas; j++) {
-        console.log('Digite o numero da ' + contador + "º linha")
+        console.log('Digite o numero da ' + contador + "º linha da " + coluna + "º coluna")
         vetor[i][j] = Number(prompt('Digite:'))
+        coluna++
     }
     contador++
+    coluna = 1
 }
 for (let i = 0; i < vetor.length; i++) {
 
     for (let j = 0; j < vetor[i].length; j++) {
         
-        resultado[i][j] = (vetor[i][j] * muti)  
+
+        
+        resultado[i][j] = (vetor[i][j] * muti)
+        if (resultado[i][j] == -0) {
+            resultado[i][j] = 0
+        }  
     }
         
 }
@@ -364,7 +374,7 @@ console.log("A subtração das matrizes é: ", r1)
 }
 //------------------------------------------------------------------------------------------------//
 function transposta() {
-    console.lop("So funciona com matriz de ordem quadrada.")
+    console.log("So funciona com matriz de ordem quadrada.")
 /*Matriz transposta da matriz Am x n é a matriz que obtemos trocando ordenadamente de posição as linhas, 
 pelas colunas. 
 Ou seja, se Am x n então Atn x m. FONTE:https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiH7Mu86rnyAhWgpZUCHfzpB5gQFnoECBoQAw&url=https%3A%2F%2Fwww.proenem.com.br%2Fenem%2Fmatematica%2Fmatrizes-teoria-nomenclatura-e-operacoes-basicas%2F%23%3A~%3Atext%3DMATRIZ%2520TRANSPOSTA%2520(AT)%2Cm%2520x%2520n%2520ent%25C3%25A3o%2520Atn%2520x%2520m.&usg=AOvVaw0tSCbohZTCRSMAgN6aEahJ */
@@ -403,6 +413,18 @@ function sobre() {
     console.log("Gilvan Pereira de Souza")
     console.log("Lucas de Alves da Silva")
 }
+
+function fontes() {
+    console.log("FONTES")
+    console.log("mundo educacao:")
+    console.log("https:mundoeducacao.uol.com.br/matematica/regra-sarrus.htm#:~:text=Essa%20regra%20diz%20que%20para,do%20determinante%20da%20seguinte%20forma%3A&text=Todos%20os%20determinantes%20de%20ordem%203%20serão%20resolvidos%20seguindo%20esse%20mesmo%20processo.")
+    console.log("toda materia: ")
+    console.log("www.todamateria.com.br/teorema-de-laplace/#:~:text=O%20Teorema%20de%20Laplace%20é,Laplace%20(1749-1827)")
+    console.log("canal do professor Paulo Perreria no youtube:")
+    console.log(" https://www.youtube.com/channel/UCZLyNRqqp2MeFuwuZdbGDJw")
+    console.log("Brasil escola : ")
+    console.log("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjA7c-nwL3yAhWyqZUCHXB_BXcQFnoECAMQAQ&url=https%3A%2F%2Fbrasilescola.uol.com.br%2Fmatematica%2Fmatriz.htm&usg=AOvVaw1v4XEkMT_dWgtGa7KZXdcU")
+}
 var opcao = - 1
 
 do { // exemplo clássico da utilização do do...while
@@ -437,6 +459,9 @@ do { // exemplo clássico da utilização do do...while
         	case 8:
             		sobre()
             		break
+                    case 9:
+                        fontes()
+                        break
     }
 
-} while (opcao <= 8 && opcao >= 1)
+} while (opcao <= 9 && opcao >= 1)
